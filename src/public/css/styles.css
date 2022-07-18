@@ -1,0 +1,537 @@
+* {
+  font-family: 'Encode Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 20px 0px 20px 0px;
+}
+
+a{
+  color: black;
+  transition: all .3s;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header i {
+  margin-top: 13px;
+}
+
+.header img {
+  width: 250px;
+  margin-right: 15px;
+}
+
+.header .menu {
+  display: none;
+}
+
+.hamburguer-menu{
+  height: 50px;
+}
+
+
+main {
+  background-image: url("../img/street-background.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  align-items: center;
+  height: 35vh;
+  z-index: 20;
+  border-width: 0px 10px 10px 0px;
+  border-style: solid;
+  border-color: #2D9CDB;
+  border-radius: 60px;
+  margin-top: 120px;
+}
+
+main h1{
+  position: relative;
+  margin: auto;
+  z-index: 100;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 4px 4px #000000;
+}
+
+main::before {
+  border-radius: 60px;
+  content    : "";
+  background : #56CCF2;
+  display    : block;
+  position   : absolute;
+  opacity    : 0.4;
+  height: 35vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.table-of-contents {
+  margin: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #56CCF2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+padding: 50px;
+margin-top: 18px;
+box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.table-of-contents h2 {
+  text-align: left;
+  color: white;
+  text-shadow: 0px 2px 0px #000000;
+}
+
+.table-of-contents a{
+  display: block;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+
+section article {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 29px;
+  margin-bottom: 40px;
+}
+
+section article h2 {
+  margin-bottom: 29px;
+  margin-top: 29px;
+}
+
+section article ul, section article ol{
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+section article p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+footer {
+  background: #56CCF2 ;
+}
+
+footer img {
+  width: 300px;
+}
+
+footer a {
+  display: block;
+  font-weight: 700;
+  font-size: 26px;
+  color: black;
+  margin-top: 20px;
+}
+
+.footer {
+  padding-top: 43px;
+  padding-bottom: 43px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.menu {
+  display: block;
+}
+
+.header-l {
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+  width: 100%;
+  padding: 40px 0 30px 0;
+  position: fixed;
+  z-index: 30000;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .menu.showed {
+  position: fixed;
+  display: block;
+  padding: 40px 20px;
+  display: flex;
+  top: 120px;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0;
+  background-color: #56CCF2;
+  z-index: 1000;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.header .menu.showed a {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu.showed{
+  display: block;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1200px){
+  .hamburguer-menu{
+    display: none;
+  }
+
+  .menu-content {
+    display: flex;
+   }
+   
+
+  .header-l{
+    background: none;
+    z-index: 1;
+    width: 40%;
+    position: relative;
+  }
+  .header .menu {
+    display: flex;
+    align-items: center;
+  }
+  .header .menu a{
+    margin-right: 40px;
+    font-weight: 600;
+  }
+  .header i {
+    margin-top: 0;
+  }
+  main{
+    margin-top: 0;
+  }
+  .box{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .table-of-contents{
+    margin-left: 20px;
+    position: fixed;
+    bottom: 15px;
+    margin-top: 20px;
+    max-height: 190px;
+    overflow-x: scroll;
+    transition: all .3s;
+ }
+
+    .table-of-contents a {
+      max-width: 350px;
+    }
+  .table-of-contents.expanded {
+    max-height: 500px;
+  }
+  .table-of-contents.footerVersion{
+    top: 20px;
+    height: 400px;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes appear{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .submenu.showed{
+    padding: 30px;
+    z-index: 5000;
+    position: fixed;
+    text-align: center;
+    top: 105px;
+    width: 600px;
+    right: 40px;
+    background-color: #56CCF2;
+    display: flex;
+    flex-direction: column;
+    animation-name: appear;
+    animation-duration: .7s;
+  }
+
+  .submenu.showed a {
+    margin-bottom: 20px;
+  }
+
+  .submenu.showed a:nth-last-child(1){
+    margin-bottom: 0;
+  }
+
+  .submenu.showed a:hover{
+    text-decoration: underline;
+  }
+  .header.fixed{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 3px #2D9CDB;
+    z-index: 10000;
+  }
+  main.down{
+    margin-top: 150px;
+  }
+}
+
+/* Cards Container Page */
+
+.cards, .alumnos {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 40px;
+  max-width: 95%;
+  justify-content: space-between;
+}
+
+
+.card:nth-child(1){
+  margin-left: 0;
+}
+
+.card {
+  padding: 20px;
+  width: calc(100%/3);
+  margin-left: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #56CCF2;
+}
+
+.card .text {
+  margin-left: 30px;
+}
+
+.card .text a{
+  display: block;
+  background-color: #155173;
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card .text p {
+  color: black;
+  font-weight: 500;
+}
+
+.card .text a:hover{
+  background-color: #1a6794;
+}
+
+@media screen and (max-width: 800px){
+  .cards{
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+  }
+  .card{
+    margin-bottom: 20px;
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.btn {
+  display: inline-block!important;
+  color: black!important;
+  cursor: pointer!important;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+article img {
+  max-width: 100%;
+}
+
+/* Css para los videos de Youtube */
+
+@media screen and (max-width: 1000px){
+
+  .card {
+    margin-left: 0;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .card:nth-child(1){
+    margin-left: auto;
+  }
+
+  .card .text{
+    margin-left: 0;
+  }
+
+  .card .text h3{
+    text-align: center;
+  }
+
+  .cards{
+    justify-content: center;
+  }
+
+  .btn {
+    font-weight: 500!important;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 70%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#site-header{
+  margin-left: 30px;
+}
+
+/* Iconos de Redes Sociales */
+
+.socials a{
+  display: inline;
+}
+
+/* Código de la parte de about */
+
+.about {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.alumnos .card {
+  border-radius: 0;
+  background-color: white;
+  box-shadow: 0px 2px 2px #000000;
+}
+
+.alumnos .card .image .ig a{
+  margin-top: 15px;
+}
+
+
+@media screen and (max-width: 700px){
+  .alumnos {
+    flex-direction: column;
+  }
+  .about {
+    max-width: 80%;
+  }
+
+  .alumnos .card .image{
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .socials {
+    display: flex;
+  }
+
+  .socials a {
+    margin-right: 15px;
+  }
+
+}
+
+.card .image p {
+  margin-bottom: 15px;
+}
+
+p{
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+}
+
+section article img {
+  margin-bottom: 30px;
+}
+
+.footer a {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header-content {
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+
+.header i {
+  margin-left: 5px;
+}
+
+section article p {
+  color: #222121;
+}
+
+.video-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
